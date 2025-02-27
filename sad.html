@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Scope</title>
+    <style>
+        body {
+            background-color: #42E2B8; /* Bright teal */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-image: linear-gradient(135deg, #42E2B8, #00B8A9);
+        }
+        h1 {
+            font-size: 4rem;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            animation: glitch 3s infinite;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+        h1:before, h1:after {
+            content: 'No Scope';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+        h1:before {
+            color: #FF00FF; /* Magenta */
+            animation: glitch-offset 3s infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+            transform: translate(-5px, -3px);
+        }
+        h1:after {
+            color: #00FFFF; /* Cyan */
+            animation: glitch-offset 2s infinite reverse;
+            clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+            transform: translate(5px, 3px);
+        }
+        .image-container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                        inset 0 0 20px rgba(255, 255, 255, 0.5);
+            animation: flicker 4s infinite;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            animation: zoom 3s alternate infinite;
+        }
+        @keyframes glitch {
+            0%, 100% { transform: skew(0deg); }
+            20% { transform: skew(3deg); }
+            40% { transform: skew(-3deg); }
+            60% { transform: skew(1deg); }
+            80% { transform: skew(-1deg); }
+        }
+        @keyframes glitch-offset {
+            0%, 100% { transform: translate(-2px, -2px); }
+            25% { transform: translate(2px, 2px); }
+            50% { transform: translate(-1px, 1px); }
+            75% { transform: translate(1px, -1px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            5%, 10% { opacity: 0.8; }
+            15% { opacity: 1; }
+            20% { opacity: 0.9; }
+            80% { opacity: 1; }
+            85% { opacity: 0.7; }
+            90% { opacity: 1; }
+        }
+        @keyframes zoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>No Scope</h1>
+    <div class="image-container">
+        <video controls autoplay loop style= "border-radius: 15px;">
+            <source src="Assets\pandaofzoo.mp4" type="video/mp4" ></video>
+    </div>
+</body>
+</html>

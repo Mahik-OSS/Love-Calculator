@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Possible</title>
+    <style>
+        body {
+            background-color: #FFD1DC; /* Soft pink */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: #FF4081;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+        .image-container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 64, 129, 0.5);
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Marriage Possible</h1>
+    <div class="image-container">
+        <video controls autoplay loop style="border-radius: 15px;">
+            <source src="Assets\bubu-dudu-bride.mp4" type="video/mp4" ></video>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affection</title>
+    <style>
+        body {
+            background-color: #DABFFF; /* Soft lavender */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3.5rem;
+            color: #9B59B6;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        .image-container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40%;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(155, 89, 182, 0.6);
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Affection</h1>
+    <div class="image-container">
+        <video controls autoplay loop style=" border-radius: 15px;">
+            <source src="Assets\peachcat-and-goma-peachcat.mp4" type="video/mp4" ></video>
+    </div>
+</body>
+</html>

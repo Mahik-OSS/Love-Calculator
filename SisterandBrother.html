@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brother and Sister Relationship</title>
+    <style>
+        body {
+            background-color: #BAFFCD; /* Soft mint green */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #00AA55;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            animation: bounce 2s infinite;
+        }
+        .image-container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 170, 85, 0.5);
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Brother and Sister Relationship</h1>
+    <div class="image-container">
+        <video controls autoplay loop style="border-radius: 15px;">
+            <source src="Assets\love-siblings.mp4" type="video/mp4" ></video>
+    </div>
+</body>
+</html>
